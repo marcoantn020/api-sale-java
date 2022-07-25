@@ -1,0 +1,1 @@
+ALTER TABLE client CHANGE complemento complement varchar(30);
