@@ -1,22 +1,22 @@
-## Acessar musql container
-    - docker exec -it mysql-java mysql -usales -psales
-
-
-
-
+## Erro ao iniciar container
+    - na raiz do projeto de permissao ao arquivo wait-for-mysql.sh
+        - rode o comando:
+            - sudo chmod 777 wait-for-mysql.sh
+   
 
 ## Dependencias
-    - Spring Web
-        - Crie aplicativos web, incluindo RESTful, usando Spring MVC. Usa o Apache Tomcat como o contêiner incorporado padrão.
+	- spring-boot-starter-data-jpa
+	- spring-boot-starter-web
+	- spring-boot-devtools
+	- mysql-connector-java
+	- spring-boot-starter-test
+	- flyway-core
+	- spring-boot-starter-validation
+	- springfox-swagger2
+	- springfox-swagger-ui
+	- opentracing-spring-jaeger-web-starter
+	- opentracing-jdbc
+	- spring-boot-starter-actuator
+	- micrometer-registry-prometheus
 
-    - Spring Data JPA
-        - Persista dados em armazenamentos SQL com Java Persistence API usando Spring Data e Hibernate.
-    
-    - Mysql Driver
-        - para se conectar com o mysql
-    
-    - Spring Boot DevTools
-        - Fornece reinicializações rápidas de aplicativos, LiveReload e configurações para uma experiência de desenvolvimento aprimorada.
-    - flywaydb
-        - Controle de versão para seu banco de dados para que você possa migrar de qualquer versão (incluindo um banco de dados vazio) para a versão mais recente do esquema.
         

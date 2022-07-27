@@ -1,6 +1,23 @@
 version: '3'
 
 services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sales-management_app:latest
+    container_name: sales_management_app_java
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql-java
+      - jeager
+      - prometheus
+      - grafana
+    command: ["-c", "/app/wait-for-mysql.sh mysql-java:3306 && java -jar /app/sales_management.jar"]
+    entrypoint: ["/bin/sh"]
+
   mysql-java:
     image: mysql:8.0.22
     container_name: mysql-java
